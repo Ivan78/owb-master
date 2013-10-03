@@ -1,0 +1,161 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" 
+	xmlns:app='urn:import:com.owb.playhelp.client'
+	xmlns:owb='urn:import:com.owb.playhelp.client.view'>
+	
+    <ui:with field='res' type='com.owb.playhelp.client.resources.Resources'/>
+    
+	<ui:style>
+		.gwt-MenuBar
+		{
+		    cursor                      :   hand;
+		    background-color            :   #8bff2d;
+			border						:	0px 0px 0px 0px;
+		    marging						: 	0px 0px 0px 0px;
+		    padding						: 	0px 0px 0px 0px;
+		}
+		.gwt-MenuBar table
+		{
+		    background-color            :   #8bff2d;
+			border						:	0px 0px 0px 0px;
+		    marging						: 	0px 0px 0px 0px;
+		    padding						: 	0px 0px 0px 0px;
+		}
+		.gwt-MenuBar .gwt-MenuItem .gwt-MenuBar
+		{
+		    background-color            :   #8bff2d;
+			border						:	0px 0px 0px 0px;
+		    marging						: 	0px 0px 0px 0px;
+		    padding						: 	0px 0px 0px 0px;
+		}
+		.gwt-MenuBar .gwt-MenuItem .gwt-MenuBar table
+		{
+		    background-color            :   #8bff2d;
+			border						:	0px 0px 0px 0px;
+		    marging						: 	0px 0px 0px 0px;
+		    padding						: 	0px 0px 0px 0px;
+		}
+		.gwt-MenuBar .gwt-MenuItem
+		{
+		    cursor                      :   hand;
+		    cursor                      :   pointer;
+		    background-color            :   #8bff2d;
+			border						:	0px 0px 0px 0px;
+		    marging						: 	0px 0px 0px 0px;
+		    padding						: 	0px 0px 0px 0px;
+			text-color					:	red;
+			text-shadow					: 	none;
+            font-family					: tahoma;
+		}
+		.gwt-MenuBar .gwt-MenuItem-selected
+		{
+		    background-color            :   #8bff2d !important;
+			border						:	0px 0px 0px 0px;
+		    marging						: 	0px 0px 0px 0px;
+		    padding						: 	0px 0px 0px 0px;
+		}
+		.gwt-MenuBar-vertical table {
+		 	border-collapse: collapse;
+		}
+	</ui:style>
+	
+	<!--
+	
+	Another example of how to use the menubar style
+.v-menubar {
+text-align: center;
+background: transparent;
+border: none;
+color: white;
+text-shadow: none;
+font-size: 16px;
+}
+.system .v-menubar-menuitem-system-menu.v-menubar-menuitem-selected {
+background: url(images/bluebar-bg-selected.png) no-repeat 50% 100%;
+}
+-->
+	
+	<g:HTMLPanel>
+	  		<div class='{style.gwt-MenuBar}'>
+	  		<g:MenuBar ui:field='mainMenu' vertical="false">
+	  			<g:MenuItem width='100%' />
+				<g:MenuItem ui:field='homeItem'>
+				  <img src='{res.menuHomeIcon.getSafeUri.asString}' />
+				</g:MenuItem>
+				<g:MenuItem ui:field='aboutUsItem'><img src='{res.menuAboutIcon.getSafeUri.asString}' ui:field='aboutUsImg'/>
+				    <g:MenuBar vertical="true">
+      					<!-- <g:MenuItem ui:field='contextItem'><font color="#ab0fc8"><b><i>Context</i></b></font></g:MenuItem> -->
+      					<g:MenuItem ui:field='ourMissionItem'><img src='{res.menuMissionIcon.getSafeUri.asString}' width='223px' height='40px' /> </g:MenuItem>
+      					<g:MenuItem ui:field='ourViewItem'><img src='{res.menuOurViewIcon.getSafeUri.asString}' width='223px' height='40px' /> </g:MenuItem>
+      					<g:MenuItem ui:field='theTeamItem'><img src='{res.menuTheTeamIcon.getSafeUri.asString}' width='223px' height='40px' /> </g:MenuItem>
+      					<g:MenuItem ui:field='joinOWBItem'><img src='{res.menuJoinOWBIcon.getSafeUri.asString}' width='223px' height='40px' /></g:MenuItem>
+     				</g:MenuBar>
+				</g:MenuItem>
+				<g:MenuItem ui:field='resourcesItem'><img src='{res.menuResourcesIcon.getSafeUri.asString}'/>
+				    <g:MenuBar vertical="true">
+      					<g:MenuItem ui:field='joinNetworkItem'><img src='{res.menuJoinNetworkIcon.getSafeUri.asString}' width='223px' height='40px' /></g:MenuItem>
+      					<g:MenuItem ui:field='searchResourcesItem'><img src='{res.menuSearchResourcesIcon.getSafeUri.asString}' width='223px' height='40px' /></g:MenuItem>
+     				</g:MenuBar>
+	 		 	</g:MenuItem>
+				<g:MenuItem ui:field='needsItem'><img src='{res.menuNeedsIcon.getSafeUri.asString}' />
+				    <g:MenuBar vertical="true">
+      					<g:MenuItem ui:field='shareProjectsItem'><img src='{res.menuShareProjectsIcon.getSafeUri.asString}' width='223px' height='40px' /></g:MenuItem>
+      					<g:MenuItem ui:field='searchProjectsItem'><img src='{res.menuSearchProjectsIcon.getSafeUri.asString}' width='223px' height='40px' /></g:MenuItem>
+      					<g:MenuItem ui:field='chooseProjectsItem'><img src='{res.menuChooseProjectsIcon.getSafeUri.asString}' width='223px' height='40px' /></g:MenuItem>
+     				</g:MenuBar>
+	 		 	</g:MenuItem>
+				<g:MenuItem ui:field='mapItem'>
+				  <img src='{res.menuMapIcon.getSafeUri.asString}' />
+				</g:MenuItem>
+				
+				<!-- 
+				<g:MenuItem ui:field='whatDoWeDoItem'><font color="#ab0fc8"><b><i>What_do_we_do?</i></b></font>
+				    <g:MenuBar vertical="true">
+      					<g:MenuItem><font color="#ab0fc8"><b><i>Life Essentials</i></b></font>
+      						<g:MenuBar vertical="true">
+      							<g:MenuItem ui:field='cleanWaterItem'><font color="#ab0fc8"><b><i>Clean Water</i></b></font></g:MenuItem>
+      							<g:MenuItem ui:field='foodItem'><font color="#ab0fc8"><b><i>Food</i></b></font></g:MenuItem>
+      							<g:MenuItem ui:field='shelterItem'><font color="#ab0fc8"><b><i>Shelter</i></b></font></g:MenuItem>
+      							<g:MenuItem ui:field='clothingItem'><font color="#ab0fc8"><b><i>Clothing</i></b></font></g:MenuItem>
+      						</g:MenuBar>
+      					</g:MenuItem>
+      					<g:MenuItem><font color="#ab0fc8"><b><i>Physical Health</i></b></font>
+      						<g:MenuBar vertical="true">
+      							<g:MenuItem ui:field='healthItem'><font color="#ab0fc8"><b><i>Medicine</i></b></font></g:MenuItem>
+      							<g:MenuItem ui:field='hygieneItem'><font color="#ab0fc8"><b><i>Hygiene</i></b></font></g:MenuItem>
+      							<g:MenuItem ui:field='safetyItem'><font color="#ab0fc8"><b><i>Safety</i></b></font></g:MenuItem>
+      							<g:MenuItem ui:field='excerciseItem'><font color="#ab0fc8"><b><i>Physical Activities</i></b></font></g:MenuItem>
+      						</g:MenuBar>
+      					</g:MenuItem>
+      					<g:MenuItem><font color="#ab0fc8"><b><i>Education</i></b></font>
+      						<g:MenuBar vertical="true">
+      							<g:MenuItem ui:field='educationItem'><font color="#ab0fc8"><b><i>Schooling Education</i></b></font></g:MenuItem>
+      							<g:MenuItem ui:field='guidanceItem'><font color="#ab0fc8"><b><i>Guidance</i></b></font></g:MenuItem>
+      							<g:MenuItem ui:field='responsabilitiesItem'><font color="#ab0fc8"><b><i>Responsabilities</i></b></font></g:MenuItem>
+      							<g:MenuItem ui:field='disciplineItem'><font color="#ab0fc8"><b><i>Discipline</i></b></font></g:MenuItem>
+      						</g:MenuBar>
+      					</g:MenuItem>
+      					<g:MenuItem><font color="#ab0fc8"><b><i>Emotional Health</i></b></font>
+      						<g:MenuBar vertical="true">
+      							<g:MenuItem ui:field='loveItem'><font color="#ab0fc8"><b><i>Love</i></b></font></g:MenuItem>
+      							<g:MenuItem ui:field='compassionateEnvironementItem'><font color="#ab0fc8"><b><i>Compassionate Environment</i></b></font></g:MenuItem>
+      							<g:MenuItem ui:field='joyItem'><font color="#ab0fc8"><b><i>Joy</i></b></font></g:MenuItem>
+      							<g:MenuItem ui:field='hopeOfFutureItem'><font color="#ab0fc8"><b><i>Hope of Future</i></b></font></g:MenuItem>
+      						</g:MenuBar>
+      					</g:MenuItem>
+     				</g:MenuBar>
+				</g:MenuItem>
+				<g:MenuItem ui:field='howDoWeHelpItem'><font color="#ab0fc8"><b><i>Who_do_we_work_with?</i></b></font>
+				    <g:MenuBar vertical="true">
+      					<g:MenuItem ui:field='howChildrenItem'><font color="#ab0fc8"><b><i>Children</i></b></font></g:MenuItem>
+      					<g:MenuItem ui:field='howProjectsItem'><font color="#ab0fc8"><b><i>Projects</i></b></font></g:MenuItem>
+      					<g:MenuItem ui:field='howOrganizationsItem'><font color="#ab0fc8"><b><i>Organizations</i></b></font></g:MenuItem>
+      					<g:MenuItem ui:field='howIndividualsItem'><font color="#ab0fc8"><b><i>Individuals</i></b></font></g:MenuItem>
+     				</g:MenuBar>
+				</g:MenuItem>
+				 -->
+	 		 </g:MenuBar>
+	 		 </div>
+	</g:HTMLPanel>
+</ui:UiBinder> 

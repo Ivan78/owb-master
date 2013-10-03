@@ -1,0 +1,32 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	
+    <ui:with field='res' type='com.owb.playhelp.client.resources.Resources'/>
+    
+	<ui:style src="../../../resources/GlobalStyles.css">
+		.important {
+			font-weight: bold;
+		}
+		.description{
+	        color:#9152a0;
+	        margin: 30px;
+	   }
+	</ui:style>
+	<g:HTMLPanel>
+	   <div class="{style.description}">
+	    <h1>CLEAN WATER</h1>
+			<div class="{style.descwrapper}">
+				<div class="{style.descpic}">
+					<g:Image url='{res.waterWebPic.getSafeUri.asString}' pixelSize="300,300"/>
+				</div>
+				<div class="{style.desclabel}">
+				Water is an essential element for life. In regions where there is a water crisis it can affect 
+				other areas as education. In addition, germs in water cause diseases and death. We aim to provide
+				clean water to orphan and abandoned children. We support projects aiming to bring clean water
+				to the children that need it.
+    		    </div>
+    		    </div>
+		</div>
+	</g:HTMLPanel>
+</ui:UiBinder> 

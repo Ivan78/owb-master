@@ -1,0 +1,30 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	
+    <ui:with field='res' type='com.owb.playhelp.client.resources.Resources'/>
+    
+	<ui:style src="../../../resources/GlobalStyles.css">
+		.important {
+			font-weight: bold;
+		}
+		.description{
+	        color:#9152a0;
+	        margin: 30px;
+	   }
+	</ui:style>
+	<g:HTMLPanel>
+	   <div class="{style.description}">
+	    <h1>MEDICATION</h1>
+			<div class="{style.descwrapper}">
+				<div class="{style.descpic}">
+					<g:Image url='{res.healthWebPic.getSafeUri.asString}' pixelSize="300,300"/>
+				</div>
+				<div class="{style.desclabel}">
+				Our goal is to provide medical care any time children suffer of disease or get hurt as well as 
+				teaching them the importance of a healthy diet.
+  			    </div>
+  			    </div>
+		</div>
+	</g:HTMLPanel>
+</ui:UiBinder> 
